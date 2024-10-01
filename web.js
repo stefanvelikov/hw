@@ -4,8 +4,8 @@ const fs = require('fs').promises;
 const path = require('path');
 const { JSDOM } = require('jsdom');
 
-const processingDomain = 'https://agota-studio.webflow.io';
-const sitemapRealDomain = 'https://agota.studio';
+const processingDomain = 'https://simple-craft-1162fa.webflow.io/';
+const sitemapRealDomain = 'https://hairweb.design';
 const sitemapUrl = `${processingDomain}/sitemap.xml`;
 const outputFolder = 'website';
 const sitemapFileName = 'sitemap.xml';
@@ -260,9 +260,9 @@ async function moveAndRenameResourcesFile() {
 
 async function processSitemapAndResources() {
   await fetchSitemap();
-  await fetchResourceLinksAndUpdateSitemap();
+ //  await fetchResourceLinksAndUpdateSitemap();
   await fixSitemapDomains();
-  await moveAndRenameResourcesFile();
+  // await moveAndRenameResourcesFile();
 }
 
 processSitemapAndResources();
